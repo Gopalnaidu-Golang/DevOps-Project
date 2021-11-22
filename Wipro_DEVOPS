@@ -1,0 +1,13 @@
+  wasp.wipro.com/esd
+ Linux env/Dev env
+   virtual box, ubentu image
+   install varios tools
+   OpenJDK, Maven, Git, Sonaquebe, Jfrog, Junit, Mockito, Selenuiem, Jenkins, Ansible, Docker, K8.
+   
+   Phase 1:CI_CD pipeline(ilp1 & ilp2)
+   Phase 2: Ansible, Docker & K8 (ilp3 & ilp4)
+   
+   Minimum 16gb ram 4 gb only for windows virtual box 3gb, if 8 gb ram is challenging to stop some services vise versa.
+   install virtual box
+   install ubentu(.ISO) 2gb ram will take
+   
