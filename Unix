@@ -1,0 +1,46 @@
+Unix file system 3 categories:
+Disk based.  ext2 boot,super,inode,data block file
+distributed.  nfs
+pseduo.     tmpfs,proc
+bin,usr/bin,sbin,usr/lib,etc,var/log,dev,
+reguler files and special files
+-,d,c,b,p,l,s
+read2,write6,execute4 +,-,=
+grp,user,other,all
+commnds for file operations
+ls,touch,chmod,cp,mv,l,rm,mkdir,rmdir,umask,find
+link: soft link & hard link
+
+find: fins -name, find -type
+df -T
+du -b
+ps,grep,sed,awk
+network commands
+
+VI:
+coursor movements
+one line up & down.  j,k
+charecter left & right.  h,l
+word left & right  w,b
+delete the char at cusror position is 'x,'
+delete the char befor cusror position is. ''X
+delete from cusror position to end of the word is 'dw'
+delete the entire line where cusror position  is. 'dd'
+delete from cusror position to end of the line is. 'd$' or 'D'
+paste text after cursor position 'p'
+paste text before cursor position. 'P'
+copy the line where cursor positioned 'yy'
+search and replace
+/pattern. search for farward
+?pattern. search for backward
+find the next occurance n
+find the previous occurance N
+replace str1 with str1 between lines n & m   :n,ms/str1/str2
+
+undo the last command 'u'
+
+configure VI editor:
+set nu
+set tabstop=4
+set ai
+
