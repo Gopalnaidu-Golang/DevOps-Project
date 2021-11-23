@@ -1,2 +1,3 @@
 create IAM role with Route53, EC2, IAM and S3 full access and attach role to EC2 instance?
 go instatnces->actions->attach IAM role.
+Modify k8s size of instances and delete cluster
