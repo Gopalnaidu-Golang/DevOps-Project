@@ -81,3 +81,12 @@ SCM Remote repo:
 SCM build continuous build:adhoc build,nightly build,CI build
 build process maturity
 
+continues inspection:
+reduce code complexity
+perform design reviews continuously
+maintain organizational standerds with code audits
+remove duplicate codes
+Access code coverage
+
+
+
