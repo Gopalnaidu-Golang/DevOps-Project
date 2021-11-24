@@ -3,6 +3,11 @@ DevOps learning and practices
 https://github.com/yankils/Simple-DevOps-Project
 https://wipro.udemy.com/course/valaxy-devops/learn/lecture/15899612#overview
 
+HW details:
+Minimum Hw required to install devops tools
+Tools installation:
+in VM/cloud
+
 Development process. [DevOps]
 Application architecture. [Micro services]
 Deployment & Packaging [continarization]
@@ -11,6 +16,7 @@ Application infrastucre. [cloud]
 paln,code,create,test,release,deploy,operate
 Agile delivery[plan,build,test], agile ops[deploy,monitor logs,support]
 plan,develop,build,test,deploy,relaes,monitor
+
 Linux
 file types
 file creation
