@@ -1,0 +1,16 @@
+Git --version
+git init
+git status
+git add .
+git commit -m "reason"
+git commit -am "reason" add & commit one shot
+git diff
+git log
+git checkout oldcommitid recover u r file
+Share a remote repo to all:
+create new project as public policy in the github to share everyone then go to local to push the code:
+git remote add origin https://GIT URL OF PROJECT repo.
+git remote -v then able to see reop
+git push -u origin master
+git pull
+
