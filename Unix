@@ -11,11 +11,14 @@ commnds for file operations
 ls,touch,chmod,cp,mv,l,rm,mkdir,rmdir,umask,find
 link: soft link & hard link
 
-find: fins -name, find -type
+find: find -name, find -type
 df -T
 du -b
 ps,grep,sed,awk
 network commands
+tar,untar
+wget
+bootstrap
 
 VI:
 coursor movements
