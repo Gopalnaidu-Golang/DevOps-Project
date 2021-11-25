@@ -89,4 +89,15 @@ remove duplicate codes
 Access code coverage
 
 
+Chef:chef server,chef client,chef workstation.
+chef recipie:
+chef cookbooks : stores thr recipies or contains recipies,templates,files,custom resources.
+chef run lists:collection of policies for the node to follow,chef-client get the run list from chef server
+Manage complexity:
+determine the desired infra
+identify the resource to meet the state
+gather resources into recipies
+compose run list from receipies and roles
+Apply runlist in each node in the env
+Infra is configured according to the policy model in he cheff
 
