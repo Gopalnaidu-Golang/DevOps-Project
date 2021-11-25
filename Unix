@@ -20,6 +20,10 @@ tar,untar
 wget
 bootstrap
 
+become root user: sudo su
+ssh
+sshkeygen
+
 VI:
 coursor movements
 one line up & down.  j,k
