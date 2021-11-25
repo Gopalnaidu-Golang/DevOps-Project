@@ -1,0 +1,39 @@
+server configuraion
+Anible inventory or ancible play book written yaml format
+ansible tasks
+ansible templates
+ansible roles
+ansible galaxy is a community wr lot of playbooks avil url:ansible.gslaxy.com
+hands on
+
+---------
+roles allows tasks,handlers,template,vrs to be placed in seperate files in seperate folders.
+- hosts: all
+     roles:
+Ansible inventory file having configure vsriable ex:pwd,userid,remote server name details.
+etc/ansible/ansible.cfg
+how to run ansible playbook associated with arguments and modules
+ansible --version
+ansible localhost -m ping -c local
+how ot login remote machine using ansible?
+ansible machinename -m ping -k -u userid
+how to gnerate sshkey in local machine nad push key to remote server to login without pwd?
+how to push sshkey id into remote machine?use login withput pwd into remote machine
+ssh-copy-id  -i /../xx.pub remote_machine_name
+cat etc/hosts
+
+tasks ex:
+---
+   - hosts: all
+     tasks:
+        - name: creating
+          file:
+            path: xx/xx/.cfg
+            state: touch
+            mode: "u=rw,g=w,o=r"
+            vars:
+            
+playbook always begin with tasks
+each task associated with module and name
+each module associated with arguments
+handlers similer a task
