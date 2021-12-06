@@ -1,3 +1,17 @@
+What is the default login shell? How to change it?
+How will you find total shells available in your system?
+Cat etc/shells
+What are interactive and non-interactive shells?
+Name the command that one should use to know how long the system has been running.
+$ uptime
+How to create shortcuts in Linux?
+wt is bootstrap use?
+Which command is used to find all information of the user?
+How to print the login names of all users on a system?
+What is the Crontab?
+How to connect to a remote server and execute some commands?
+How to connect to a database server from Linux?
+
 Unix file system 3 categories:
 Disk based.  ext2 boot,super,inode,data block file
 distributed.  nfs
@@ -11,20 +25,55 @@ commnds for file operations
 ls,touch,chmod,cp,mv,l,rm,mkdir,rmdir,umask,find
 link: soft link & hard link
 
-find: find -name, find -type
+Name the command that is used to display the shell's environment variable.
+
+What do you mean by the “s” permission bit in a file?
+What is the best way to run a script in the background?
+
+File permissions:
+Write the command that is used to execute a shell file.
+chmod +x script-name-here.sh
+
+find directories or files
+find: find / -name filename, find -type
+memory or dick size:Name different commands that are available to check the disk usage.
 df -T
 du -b
-ps,grep,sed,awk
+cat /proc/cpuinfo
+cat /proc/meminfo
+free -m -g
+
+process running:
+ps -auf
+top
+kill -9
+
+pattern searching from file:
+grep,sed,awk,diff
+
 network commands
+
+Name two files of crontab command.
+
+fork
+finger
+How to use pipe commands?
+
+compress commnad:
 tar,untar
 wget
+
 bootstrap
 
 become root user: sudo su
 ssh
 sshkeygen
 
-VI:
+VI: What are the different modes of vi editors?  What is redirection?
+What is the shebang line in shell scripting
+#!/bin/bash  
+What is the importance of $#?What is the difference between $! And $$?
+
 coursor movements
 one line up & down.  j,k
 charecter left & right.  h,l
@@ -50,4 +99,24 @@ configure VI editor:
 set nu
 set tabstop=4
 set ai
+How will you debug a shell script?
+Set -x or set -v
+
+Display file content:
+How to get the 3rd element/column from each line from a file?
+#!/bin/sh awk ‘{print $3}’ $1
+How to get 5rd element from each line from the file?
+awk ‘{print $5}’
+From given file name find the count of lines containing word  “ABC”
+grep –c “ABC” filename
+file operations commands:head,tail,cp -R,mv -R,cat,mkdir,rmdir,touch
+
+What are the various stages of the Linux process? Waiting,running,stop,zambie
+how to find process name from process ID?
+
+ I want to create a directory such that anyone in the group can create a file and access any person’s file in it but none should be able to delete a file other than the one created by himself. 
+mkdir direc1
+chmod g+wx direc1
+chmod +t direc1
+
 
