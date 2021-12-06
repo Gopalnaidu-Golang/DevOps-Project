@@ -1,0 +1,7 @@
+How to create docker container using existing image?
+cmd: docker run -d --name tomcat-container -p 8080:8080 tomacat:latest
+docker ps -a
+how to login into docker container?
+docker exec -it container-name /bin/bash
+
+
