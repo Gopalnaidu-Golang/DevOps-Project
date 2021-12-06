@@ -101,3 +101,27 @@ compose run list from receipies and roles
 Apply runlist in each node in the env
 Infra is configured according to the policy model in he cheff
 
+Kubernates:lable mechanisem for idntity of pod
+K8 api server configures & validate the data for each api objects like pod,controllers and services
+end point contrller,replication control,name space controler
+K8 scheduler manages to pods on cluster servers
+master nodes & worker nodes pods are scheduled on worker nodes
+kubelet is agent. to communicate each node with master
+kube-proxy responsible networking be workers
+Supports:
+DNS
+web Ui
+container resourse monitoring 
+cluster level logging
+Kub objects:
+Pods
+kubernate service
+kubernate volume. is storage resource traks failures and state of failure.
+kubernate namespace
+Controllers:
+replica set
+stateful set:
+deamon set:
+with in pod network system also with outside pod
+withon pod shares ip and port btw containers using inter process communication
+how to adopt old pods when loss replication controller using ner replication controller.using matching lable
