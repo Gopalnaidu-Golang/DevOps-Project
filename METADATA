@@ -15,3 +15,4 @@ https://wipro.udemy.com/course/valaxy-devops/learn/lecture/15899612#overview
 dockerhub to full images from dockerhub.
 pluginns
 deploy to container: to deploy VM.[**/*war]
+manage jenkins -> manga plugins -> available then search publish over ssh plugin. 
