@@ -1,0 +1,12 @@
+USECASES:
+setup ansible
+trobleshooting: unable to setup ansible
+integrate ansible with jenkins
+creating an ansible playbook
+common issues faced during practice
+run ansible playbook from jenkins
+update ansible playbook to to delete and create docker containers
+dockerhub integration with ansible
+tagging docker image using ansible playbooks
+jenkins job to deploy on docker container through dockerhub.
+jenkins job to deploy a war file on docker container using ansible.
