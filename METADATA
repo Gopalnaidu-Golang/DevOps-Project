@@ -11,3 +11,7 @@ Description: This proj created for DevOps learning and practices
 10.Reference URLS:
 https://github.com/yankils/Simple-DevOps-Project/tree/master/Kubernetes
 https://wipro.udemy.com/course/valaxy-devops/learn/lecture/15899612#overview
+
+dockerhub to full images from dockerhub.
+pluginns
+deploy to container: to deploy VM.[**/*war]
