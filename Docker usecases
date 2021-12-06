@@ -4,4 +4,22 @@ docker ps -a
 how to login into docker container?
 docker exec -it container-name /bin/bash
 
-
+Integrate docker to the jenkins.
+create a admin user in docker server?
+log in dockerserver 
+cmd: useradd dockeradmin
+    : passwd dockeradmin
+    
+    cat /etc/group to find how many groups avail in docker server.
+ cmd: usermod -aG docker dockeradmin. adding user to group docker.
+ cmd : id dockeradmin
+ cmd : ip addr
+ docker credentials we need to provide to jenkins
+ manage jenkins -> configure system -> publish over ssh : provide docker credential and chk test connection
+ cmd : vi /etc/ssh/ssh_config   to enable passwd authentication no to yes in the file
+ USECASE: create a new job to copy our artifactory(war file) into docker host.then move to docker container.
+ new jenkins job: new item -> copy from the previous job. -> add post build action -> choose send build artifact over ssh.
+ webapps/targer/*.war
+ 
+ how to modify u r existing job?
+USECASE: write a docker file to copy artifactory to docker container which create a tomcat server in side that copy war file.
