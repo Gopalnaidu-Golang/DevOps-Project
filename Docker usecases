@@ -1,5 +1,26 @@
+Docker USECASES:
+docker setup
+
+common issue: address latest tomcat docker image issue
+
+integrating docker host with jenkins
+
+jenkins job to copy artifacts onto docker host
+
+create a docker file
+
+deploy a war file onto docker container using jenkins
+
+trobleshooting: unable to push docker image:
+If you are unable to push docker image it means that you haven't logged into dockerhub as a user which you are trying to push.
+during my course, I ran playbook as a "ansadmin" user (because there is a typo in the "become: true" so it didn't execute as root user). If you are executing as a root user then you should log in to DockerHub as a root user.
+in short, you can do either one of the below
+1. remove or comment "become: true" in the playbook  or
+2. Login to dockerhub as a root user
+
+
 How to create docker container using existing image?
-cmd: docker run -d --name tomcat-container -p 8080:8080 tomacat:latest
+cmd: docker run -d --name tomcat-container -p 8080:8080 tomacat:latest.  //-d flag: detach mode means run in background
 docker ps -a
 how to login into docker container?
 docker exec -it container-name /bin/bash
@@ -18,8 +39,25 @@ cmd: useradd dockeradmin
  manage jenkins -> configure system -> publish over ssh : provide docker credential and chk test connection
  cmd : vi /etc/ssh/ssh_config   to enable passwd authentication no to yes in the file
  USECASE: create a new job to copy our artifactory(war file) into docker host.then move to docker container.
- new jenkins job: new item -> copy from the previous job. -> add post build action -> choose send build artifact over ssh.
+ new jenkins job: new item -> copy from the previous job. -> select add post build action -> choose send build artifact over ssh.
  webapps/targer/*.war
  
  how to modify u r existing job?
 USECASE: write a docker file to copy artifactory to docker container which create a tomcat server in side that copy war file.
+vi file name: content below
+FROM tomcat:latest. //pull tomcat image from public docker host
+
+MAINTAINER AR Shankar
+
+COPY ./webapp.war /usr/local/tomcat/webapps   //copy from current directory to given path inside docker host.
+
+USECASE: create or build image for docker file to create container.
+cmd: docker build -t devops-container
+cmd: ocker images
+cmd: doker run --name devops-container -p 8080:8080 docker-project
+USECASE: deploy a war file on docker container using jenkins
+select post build actions -> send build artifacts over ssh -> exec commands sectin type cmnds
+cd /home/dockeradmin; docker build -t devops-image . ;docker run -d --name docker-container - 8080:8080 devops-image;
+
+how to delete image: cmnd: docker rmi docker-image
+
