@@ -1,4 +1,7 @@
 how to copy public and private key of hosts sys?
+modify existing job?
+to chk containers: cmd: docker ps -a
+to chk images: cmd: docker images
 USECASES:
 setup ansible
 trobleshooting: unable to setup ansible
@@ -67,8 +70,54 @@ cmd:yum install python
     
     goto ui run job and chk copied artifacts into the ansible server.
     
+    creating an ansible playbook: to create docker image by using docker file & war file.
+    vi simple-devops-image.yaml
+    ---
+    hosts:all
+    become: true
+      tasks: build docker image using war file
+      - name: stop running container
+        command: docker stop simple-devops-container
+        ignore_errors: yes
+      - name: remove stopoed container
+        command: docker rm simple-devops-container
+        ignore_errors: yes
+      - name: remove docker image
+        command: docker rm  simple-devops-image
+        ignore_errors: yes
+      - name: build docker image using war file
+        command: docker build -t simple-devops-image
+        args: /opt/docker
+        - name: create tag to image 
+        command: docker tag simple-devops-image /yankil/simple-devops-image
+        - name: push image on to dockerhub
+        command: docker push /yankil/simple-devops-image
+        - name: pull image from dockerhub
+        command: docker pull /yankil/simple-devops-image
+       - name: create container using docker image
+        command: docker run -d simple-devops-container -p 8080:8080 simple-devops-image
+        
+   vi hosts  //to create image only in localhost not in the target sys
+   type localhost then save a file
+   
+   run playbook:
+   cmd: ansible-playbook -i hosts simple-devops-image.yaml --check
+   ansible-playbook -i hosts simple-devops-image.yaml // success
+  ansible-playbook -i hosts simple-devops-image.yaml --limit localhost. //to create only in localhost
+  
+   run ansible playbook from jenkins: in the job use below command to run the job.
+   execute command: ansible-playbook -i /opt/ansible/hosts /opt/ansible/simple-devops-image.yaml
+   
+   when change in the code and get new commit then create new image by taking new webapp also create container to test activity using pollscm 
+   though jenkins to pickup changes automate.
+   
+   dockerhub integration with ansible: to push all images which r created using ansible play book.so that all 100 of target systems pull image from dockerhub then creates container.
+   if don't have dockerhub accnt the create new one
+   
+    job:deploy_on_docker_container_suing_ansible
+    ansible-playbook -i /opt/docker/hosts /opt/docker/simple-devops-image.yaml --limit localhost
+    ansible-playbook -i /opt/docker/hosts /opt/docker/simple-devops-project.yaml --limit ipoftargetsys
     
-    
-    
+    if container fails who will take care , for this kubernates is comes into the picture
     
     
