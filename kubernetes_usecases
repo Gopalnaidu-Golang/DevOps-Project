@@ -1,0 +1,36 @@
+how to login kubernetes mater system? then become root user
+ssh -i ~/.ssh/id_rsa admin@masterip
+
+kubectl get nodes
+kubectl get pods -o wide
+kubectl get deploy  --creats replicaset and pods
+kubectl get service --if creats service then only access the application which is running in to the pods. or use is expose our application outside from cluster.
+
+introduction to kubernetes 
+  setting up kubernates env
+  using kubectl commands
+  writing deployment and service file
+  creating ansible playbook to deploy
+  run a jenkins job.
+trabulshooting: panic: runtime error: invalid memory address or nil pointer
+setup kubernetes part1:setup ubuntu server
+setup kubernetes part1:setup cluster on aws
+common issues: unable to access kube cluster
+common issues: modify K8S instace sizes and delete kube clusters
+create deployment and service using kubectl commands
+create deployment and service using yaml commands
+Integrate kubernates with ansible
+create deployment and service using ansible
+jenkins cd job to deploy on kubernetes
+Automate deployment on kubenetes with ci/cd jobs
+setup ci/cd job for kubernate lab
+
+create deployment and service using kubectl commands:
+deploying nginx container
+cmd: kubectl run sample-nginx --nginximagename --replica=2 --port=80
+access application inside cluster: cmd: wget ipofpod
+if u access outside cluster create a service.
+cmd: kubectl expose deployment sample-nginx --port=80 --type=loadbalencer
+     kubectl get pods find port here to expose from browser that port u need to put into security group then onle possible from browser using masterip/port.
+     kubectl delete pod podname
+     
