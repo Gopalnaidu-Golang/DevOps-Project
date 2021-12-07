@@ -1,3 +1,4 @@
+how to copy public and private key of hosts sys?
 USECASES:
 setup ansible
 trobleshooting: unable to setup ansible
@@ -10,3 +11,64 @@ dockerhub integration with ansible
 tagging docker image using ansible playbooks
 jenkins job to deploy on docker container through dockerhub.
 jenkins job to deploy a war file on docker container using ansible.
+
+Setup Ansible:create new instance & login then do below
+cmd:yum install python
+    yum install python-pip
+    pip install ansible
+    ansible --version
+    mkdir /etc/ansible
+    useradd ansibleadmin then setup passwd
+    visudo then shift+g to go end of file then print ansadmin ALL=(ALL) NOPASSWD: ALL. //so that won't ask pwd when open the server
+    yum install docker
+    service docker status
+    service docker start
+    usermod -aG docker ansadmin
+    vi /etc/ssh/ssh_config. then search passwd no to yes
+    service sshd reload
+    su - ansadmin
+    
+    ssh-keygen
+    ssh-copyid ansadmin@IPofDockerhost
+    then go login to docker host system using ssh ansadmin@IPofDockerhost. //without pwd
+    
+    logout
+    change hostname
+    cmd:hostname ansible-control-node
+    sudo su -
+    
+    check the communication bw the system using ping for that create host file int othe ansible system using
+    got to cd /etc/ansible. 
+    sudo su -//no file will be here
+    sudo vi hosts
+    add ipofDokcersys
+    add localhost
+    ping test:
+    cmd: ansible all -m ping
+    local host is failing to success for that add key to localhost using cmd: ssh-copy-id localhost
+    then run cmd: ansible all -m ping now 2 are green.
+    go back to docker host:
+    create user called ansadmin
+    useradd ansadmin. the set pwd
+    
+    integrate ansible with jenkins:
+    jump into jenkins console-> go to UI-> got to managed jenkins -> configure system -> publish over ssh -> click add button then fill below options.
+    name:ans lgin
+    hostname: Ipofansibleserver using cmd: ip addr
+    username:
+    remote directory:
+    use passwd authentication:
+    test: success
+    then create a new job : deploy_on_contsiner_using_ansible
+    goto ansible servr to create new directory:
+    cd /opt
+    sudo mkdir docker
+    sudo chown -R ansadmin:ansadmin /opt/docker.  //to give ownership to the directory[bz created as root]
+    
+    goto ui run job and chk copied artifacts into the ansible server.
+    
+    
+    
+    
+    
+    
