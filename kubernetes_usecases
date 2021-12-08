@@ -30,10 +30,13 @@ setup ci/cd job for kubernate lab
 
 create deployment and service using kubectl commands:
 deploying nginx container
-cmd: kubectl run sample-nginx --nginximagename --replica=2 --port=80   --to deploy nginx on cluster without using deployment.yml file  
-access application inside cluster: cmd: wget ipofpod
+cmd: kubectl run sample-nginx --nginximagename --replica=2 --port=80   --to deployment nginx on cluster without using deployment.yml file  
+access application inside cluster: cmd: wget ipofmaster:port
 if u access outside cluster create a service.
-cmd: kubectl expose deployment sample-nginx --port=80 --type=loadbalencer.  --to service nginx on cluste without using service.yml file
+cmd: kubectl expose deployment sample-nginx --port=80 --type=loadbalencer.  --to create a service for nginx on cluster without using service.yml file to expose service
      kubectl get pods find port here to expose from browser that port u need to put into security group then onle possible from browser using masterip/port.
      kubectl delete pod podname
+
+jenkins cd job to deploy on kubernetes:
+ansible-playbook -i /opt/kubernates/hosts /opt/kubernates/xxx_deploy.yml;ansible-playbook -i /opt/kubernates/hosts /opt/kubernates/xxx_service.yml
 
