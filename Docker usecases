@@ -59,5 +59,8 @@ USECASE: deploy a war file on docker container using jenkins
 select post build actions -> send build artifacts over ssh -> exec commands sectin type cmnds
 cd /home/dockeradmin; docker build -t devops-image . ;docker run -d --name docker-container - 8080:8080 devops-image;
 
+USECASE: CI job on jenkins to create dockerimage and deploy to creatr a docker container.
+    ansible-playbook -i /opt/docker/hosts /opt/docker/xxx_sample_image.yml;ansible-playbook -i /opt/docker/hosts /opt/docker/xxx_sample_project.yml;
+
 how to delete image: cmnd: docker rmi docker-image
 
