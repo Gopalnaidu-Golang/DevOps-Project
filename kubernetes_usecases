@@ -5,6 +5,9 @@ kubectl get nodes
 kubectl get pods -o wide
 kubectl get deploy  --creats replicaset and pods
 kubectl get service --if creats service then only access the application which is running in to the pods. or use is expose our application outside from cluster.
+how to deploy deployment file?
+kubectl apply -f deploy.yml
+kubectl apply -f service.yml
 
 introduction to kubernetes 
   setting up kubernates env
@@ -27,10 +30,10 @@ setup ci/cd job for kubernate lab
 
 create deployment and service using kubectl commands:
 deploying nginx container
-cmd: kubectl run sample-nginx --nginximagename --replica=2 --port=80
+cmd: kubectl run sample-nginx --nginximagename --replica=2 --port=80   --to deploy nginx on cluster without using deployment.yml file  
 access application inside cluster: cmd: wget ipofpod
 if u access outside cluster create a service.
-cmd: kubectl expose deployment sample-nginx --port=80 --type=loadbalencer
+cmd: kubectl expose deployment sample-nginx --port=80 --type=loadbalencer.  --to service nginx on cluste without using service.yml file
      kubectl get pods find port here to expose from browser that port u need to put into security group then onle possible from browser using masterip/port.
      kubectl delete pod podname
-     
+
