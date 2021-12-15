@@ -1,0 +1,60 @@
+
+Steps to create a new user:
+Login into Jenkins
+Go to Manage Jenkins
+Go to Create Users
+Enter all the details – Username, Password, Confirm Pwd, FullName, Email
+Select Create User
+How to add and manage user permissions in Jenkins?
+How to Create users and Assign roles on Jenkins ?
+insstall jenkins:
+create ec2 instance and login
+to install should have root permissions
+install java[yum install java-1.8] - yum remove java-1.7 to remove old versions.
+find /usr/lib/jvm/java-1.8* | head -n 3
+set homepath jre path
+vi .bash_profile then logoff and login
+install jenkins:search in browser for redhat linux RPM packages for jenkins
+sudo wget -o /xx/../../jenkins 
+after install jenkins chk the status: service jenkins status if it is stoped state
+start service: service jenkins start then access over browser using ip&port of jenkins server
+finally setup java home path in jenkins over browser: goto manage jenkins->global tool configuration->add jdk then setup java-home path.
+
+run first job.
+how to modify u r job: go to job->config->scroll.
+how to see how many jobs avail?
+cmd: hostname jenkins
+git setup:first install jenkins server then istll plugin in through browser.
+yum install git -y
+later goto manage jenkins->global tool configuration->find git automatically here to confirm installation.
+
+Maven install on jenkins: downlad maven under opt folder.
+cd /opt
+wget maven the untar using tar -zxvf maven
+for maven we need setup path for two varibles: vi /etc/.bash_profile then logoff & login.exit to relogin sudo su .
+ m2_home=/opt/mave ,m2=/opt/mave/bin
+ then maven --version now no version showing.then setup below path
+ to export varibles path=$HOME/bin:$JAVA_HOME:$M2:$M2_HOME
+ run again maven --version now able to see the version.
+ then installl maven pluginns in browser jenkins. then setup maven path  using goto manage jenkins->global tool configuration->
+ create first maven job: new item->source code management->git her give clone path : if public no need to provide credentials.private need to provide.
+ scroll down find build option->pom.xml is mandatory in git repo using pom.xml only maven will build the job.
+
+
+Install pluginns:
+manage jenkins->manage pluginns -> available search for publishover ssh plugin. then needs to add docker server credentials.So create user called dockeradmin in docker server 
+then add to a group
+useradd dockeradmin then set pwd
+add to a group:cat /etc/group
+              : usermod -aG docker dockeradmin
+              : id dockeradmin will shows group.
+then add above credentails to jenkins server:
+go to manage jenkins->configure system then scroll down and find publish overssh -> add ssh server give pwd then test server connection.if it fails then enable pwd authentication 
+in the docker server.
+to enable taht: vi /etc/ssh/sshd_config in this pwdauthentication no to yes then restart the server, then chk test server connetion in jenkins.
+create jenkins job to cpy artifacts onto docker server:
+new job ->scroll down then search post build action select add post build action -> choose send artifacts over ssh from dropdown list.
+
+
+              
+
