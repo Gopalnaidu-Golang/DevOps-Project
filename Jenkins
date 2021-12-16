@@ -1,5 +1,9 @@
+https://support.cloudbees.com/hc/en-us/articles/221087168-Restricting-the-ability-for-users-to-create-projects-at-the-Jenkins-top-level-vs-inside-Folders
+Masking credentials in Jenkins
+https://plugins.jenkins.io/workflow-aggregator/
+Jerkins shared library
 
-Steps to create a new user:
+Steps to create a new user: add permissions to create jobs.
 Login into Jenkins
 Go to Manage Jenkins
 Go to Create Users
