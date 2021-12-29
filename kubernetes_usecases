@@ -1,5 +1,7 @@
 how to login kubernetes mater system? then become root user
 ssh -i ~/.ssh/id_rsa admin@masterip
+wt use manifest files: pod manifest and service manifest file
+wt use of deployment file:
 
 kubectl get nodes
 kubectl get pods -o wide. 
@@ -9,6 +11,7 @@ kubectl get service --if creats service then only access the application which i
 how to deploy deployment file?
 kubectl apply -f deploy.yml
 kubectl apply -f service.yml
+kubectl get replicaset
 
 introduction to kubernetes 
   setting up kubernates env
@@ -29,6 +32,18 @@ jenkins cd job to deploy on kubernetes
 Automate deployment on kubenetes with ci/cd jobs
 setup ci/cd job for kubernate lab
 
+how to create a pod manifest file? 
+search google: pod manifest file in kubernates then create a static pod
+vi pod.yml
+cmd: kubectl apply -f pod.yml
+kubectl get all
+how to create a service manifest file?
+vi service.yml
+ kubectl apply -f service.yml
+why we need to use lables in manifest files:
+when try to access from external to select the pod using lables through loadnbalencer.
+
+
 create deployment and service using kubectl commands:
 deploying nginx container:
 cmd: kubectl run sample-nginx --nginximagename --replica=2 --port=80   --to deployment nginx on cluster without using deployment.yml file  
@@ -36,10 +51,12 @@ access application inside cluster: cmd: wget ipofmaster:port
 kubectl create deployment demo-nginx --image=nginx --replica=2 --port=80
 
 if u access outside cluster create a service.
-cmd: kubectl expose deployment sample-nginx --port=80 --type=loadbalencer.  --to create a service for nginx on cluster without using service.yml file to expose service
+cmd: kubectl expose deployment sample-nginx --port=80 --type=LoadBalencer.  --to create a service for nginx on cluster without using service.yml file to expose service
      kubectl get pods find port here to expose from browser that port u need to put into security group then onle possible from browser using masterip/port.
      kubectl delete pod podname
-
+     kubectl delete deployment sample-nginx
+     kubectl delete service/sample-nginx
+ 
 jenkins cd job to deploy on kubernetes:
 ansible-playbook -i /opt/kubernates/hosts /opt/kubernates/xxx_deploy.yml;ansible-playbook -i /opt/kubernates/hosts /opt/kubernates/xxx_service.yml
 
