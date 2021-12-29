@@ -1,7 +1,10 @@
 how to login kubernetes mater system? then become root user
 ssh -i ~/.ssh/id_rsa admin@masterip
-wt use manifest files: pod manifest and service manifest file
-wt use of deployment file:
+wt use manifest files: deployment manifest and service manifest file
+wt use of deployment file: to create pods
+wt use of service file: to expose service from kube env and external web browser
+when new version image created how kube deployment file recognize and recreate the pods? 
+using strategy:type: rollingupdate in the deploymnet manifest file.
 
 kubectl get nodes
 kubectl get pods -o wide. 
@@ -37,6 +40,7 @@ search google: pod manifest file in kubernates then create a static pod
 vi pod.yml
 cmd: kubectl apply -f pod.yml
 kubectl get all
+kubectl describe service/sample-nginx
 how to create a service manifest file?
 vi service.yml
  kubectl apply -f service.yml
