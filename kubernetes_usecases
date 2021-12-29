@@ -2,7 +2,8 @@ how to login kubernetes mater system? then become root user
 ssh -i ~/.ssh/id_rsa admin@masterip
 
 kubectl get nodes
-kubectl get pods -o wide
+kubectl get pods -o wide. 
+kubectl get service -o wide
 kubectl get deploy  --creats replicaset and pods
 kubectl get service --if creats service then only access the application which is running in to the pods. or use is expose our application outside from cluster.
 how to deploy deployment file?
@@ -29,9 +30,11 @@ Automate deployment on kubenetes with ci/cd jobs
 setup ci/cd job for kubernate lab
 
 create deployment and service using kubectl commands:
-deploying nginx container
+deploying nginx container:
 cmd: kubectl run sample-nginx --nginximagename --replica=2 --port=80   --to deployment nginx on cluster without using deployment.yml file  
 access application inside cluster: cmd: wget ipofmaster:port
+kubectl create deployment demo-nginx --image=nginx --replica=2 --port=80
+
 if u access outside cluster create a service.
 cmd: kubectl expose deployment sample-nginx --port=80 --type=loadbalencer.  --to create a service for nginx on cluster without using service.yml file to expose service
      kubectl get pods find port here to expose from browser that port u need to put into security group then onle possible from browser using masterip/port.
