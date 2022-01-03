@@ -5,6 +5,17 @@ ansible templates
 ansible roles
 ansible galaxy is a community wr lot of playbooks avil url:ansible.gslaxy.com
 hands on
+to integrate kubernate bootstrap server with ansible:
+first create ansadmin user in bootstrap server:to login to ansible server
+cmnd: useradd ansadmin
+we should add him to sudo file which is vi sudo edit where haing root then add line
+ansadmin ALL=(ALL)    NOPASSWD: ALL
+then enable password based authentication:
+vi etc/ssh/ssh_config
+then change passwordauthentication from no to YES
+then run cmnd: service sshd reload
+
+
 
 ---------
 roles allows tasks,handlers,template,vrs to be placed in seperate files in seperate folders.
