@@ -1,0 +1,274 @@
+WIPRO:
+
+Digithon: drive url
+https://teams.microsoft.com/_?culture=en-in&country=IN&lm=deeplink&lmsrc=NeutralHomePageWeb&cmpid=WebSignIn#/files/General?threadId=19:ZMr76R1ew8DfZI0pA-WXsD0C0ClegnA-Km4d6lwuISE1@thread.tacv2&ctx=channel
+
+
+https://wiprocon.webex.com/recordingservice/sites/wiprocon/recording/d40fce482a86103abe3e005056812d7f/playback
+https://wiprocon.webex.com/wiprocon/ldr.php?RCID=dc3a7eb6f5cdbdde0dedb36e26518ead
+
+CUR-3239.  devOps.
+Your MS Teams Group detail is : DevOps-B39
+ 
+Your MS Teams Code is :  u679kr0
+
+https://wipro.udemy.com/course/aws-ec2-masterclass/learn/lecture/9223142#overview
+https://wipro.udemy.com/course/valaxy-devops/learn/lecture/20108293#overview
+https://wipro.udemy.com/course/spark-and-python-for-big-data-with-pyspark/learn/lecture/7047212#overview
+
+1.Why do containerized applications are considered lightweight and fast
+Containers use miniaturized virtual machines which are light weight and faster
+Containers have only application inside them, making them light weight
+Containers offer exclusive compresession technology makin them light weight and faster
+Containers have only the application and its required dependencies and has no kernel
+
+2.How Chef Roles are made to define the role played by a server
+ role will be uploaded to Chef server using the knife role from file command.
+
+3.in Chef, the chef-shell recipe runs in three modes. Select the one that is NOT one of the chef-shell modes:
+Standalone mode
+Client mode
+Solo mode
+
+19.Who doesn't need Continuous Deployment?
+ is used to indicate the chef-client the details about how a node is configured in an organization.
+When does Continuous Deployment lead to Continuous Delivery?
+What is the function of CI (Continuous Integration) server?
+Whether containers are best means to deploy loosely coupled microservices?
+
+What is the difference between Continuous Delivery and Continuous Deployment?
+DevOps brings once-siloed Dev and Ops together to improve agility and achieve benefits of:
+Docker helps modernize the traditional application by deploying them on cloud easily once they are containerized
+Sequence of testing process
+Famous ci tool
+
+1.Which of the following aspects apply to Kubernetes Pod?
+Pods are similar to container with application deployed in them directly
+Pods can have multiple containers and volumes within them
+Pods are connected to the network and have services exposed through ports
+Each Pod will have unique IP address with its network interface in the cluster
+
+2.Configuration Management refers to following activities
+Ensure availability of all dependencies required to run the application successfully
+Install, configure and start the required resources as required
+Boot start the server and bring up the operation system
+Manipulate the application already running on the server
+
+3.Which model is used in Chef to achieve Desired State Configuration for specifying the configuration of systems?imparative
+Declarative
+Imperative
+Procedural
+Random
+
+4.What does Ansible Role has to configure the server?4
+Ansible role has tasks, varibles and handlers in separate folder
+Ansible role is the structured way of presenting the way server need to be configured
+Ansible role also has files and template files to be used while configuring the server
+Ansible role has list of hosts that required to be configured
+
+5. is the fundamental element of configuration in an organization.Recipe
+Cookbook
+Recipe
+Node
+Chef-client
+
+6.Who doesn't need Continuous Deployment  4 th one
+Where applications are large, monolithic and tightly coupled
+Where ITIL processes superseeds DevOps Processes restricting release calendar
+Where business continuosly wants to make frequent changes to application
+Where change in app environment cannot be easily automated
+
+7.___node_____ is used to indicate the chef-client the details about how a node is configured in an organization.
+Chef-server
+Cookbooks
+Node
+Enterprise Chef
+
+8. what level containerization offer virtualization to support application deployment?
+Containers offer virtualization at application level above the operating system
+Containers offer virtualization at kernel level
+Containers offer virtualization at machine level
+Containers virtualize the operating system
+
+9.which of these would NOT rank as a primary concern when choosing a DevOps tool?
+Compatibility with cloud platforms, such as AWS or Azure
+Integration with environmental sensors on the data center floor
+Reporting and control integration with collaboration tools
+Ability to integrate with other CICD tools
+
+10.How Does Ansible Configure the production server?
+Ansible connect with server to be configured through SSH and PUSH the playbook
+Ansible agent on the server to be configured pulls the playbook from Ansible Server
+Ansible triggers the agent on the server to be configured to fetch playbook from repository
+Ansible directly configures the serve to be configured
+
+11.How Chef Roles are made to define the role played by a server
+Chef Roles are the structured of defining a cookbook having multiple recipes
+Chef Roles are combination of multiple cookbooks to define the role played by server
+Chef Roles are combination of Chef Resources manipulated by Recipes
+Chef Roles consist of automated modules which subsequently define the role played by server
+
+12.What is the function of CI (Continuous Integration) server
+CI server function is used only for production deployments.
+CI server function is to continuously integrate all changes being made and committed to repository by different developers and check for build errors.
+CI server is used only to run test cases.
+CI server is used for log monitoring purpose.
+
+13.Which of these tools is not associated with DevOp
+Jenkins
+Chef
+Puppet
+Vertiv MPX Adaptive Rack PDU
+
+14.When does Continuous Deployment lead to Continuous Delivery?
+If the deployed application is meeting most of the test cases it may be pushed for delivery
+When the deployed application is also ready for production, as decided by business team
+When the deployed application meets all the required test cases as decided by testing team
+Every deployed application may also be delivered continuously
+
+15.how Does Ansible Configure the production server?
+Ansible connect with server to be configured through SSH and PUSH the playbook
+Ansible agent on the server to be configured pulls the playbook from Ansible Server
+Ansible triggers the agent on the server to be configured to fetch playbook from repository
+Ansible directly configures the serve to be configured
+
+How Kubernetes service can be used to access services that are hosted in the pods?
+
+￼
+Mark
+
+
+Kubernetes services are always accessed in the code using IP address associated with the Pod
+
+
+Kubernetes services are always accessed using the IP address associated with the container
+
+
+Kubernetes services are always accessed using the cluster IP associated with exposed service
+
+
+Kubernetes services hosted in one POD can not be accessed outside the Pod
+How does containerization support easy application deployment?
+
+￼
+Mark
+
+
+Containers offer a mini virtual machine giving exclusive environment for application deployment
+
+
+Containers can automatically take care of creating required environment to run application smoothly
+
+
+Containers offer an exclusive environment with dependencies to support smooth running of applications
+
+
+Containers can detect the dependency required by application automatically
+In Chef, a knife data bag item is encrypted using which of the following methods?
+
+￼
+Mark
+
+
+Shared secret encryption
+
+
+Public encryption
+
+
+Asymmetric encryption
+
+
+Symmetric encryption
+
+
+
+Ansible Playbooks/roles configure the server using predefined __________ written in ______ language.
+
+￼
+Mark
+
+
+tasks written in ruby language
+
+
+modules written in Java language
+
+
+modules written in Go language
+
+
+modules written in Python language
+
+Chef/puppet is management tool
+Server and Client communicate to get Cookbook to configure the production server?
+
+￼
+Mark
+
+
+Chef Client generate the cookbook after being authenticated by Chef Server
+
+
+Chef Client gets the Cookbook from the repository after being directed by Chef Server
+
+
+Chef Client pulls the Cookbook from Chef Server to configure
+
+
+Chef Server pushes the Cookbook to trigger Chef Client to configure
+
+18 of 20
+
+QUESTIONS 
+
+00:11:04
+Ansible Playbook define the relation between the _____________ server to be configured and _______
+
+￼
+Mark
+
+
+production server to be configured and the host server
+
+
+production server to be configured and role to be played by the same
+
+
+production server to be configured and repository of playbooks
+
+
+production server to be configured and the way it is to be configured
+How does the worker nodes in Kubernetes are related with master node?
+
+￼
+Mark
+
+
+Master node push the agents into the worker node, so that they form the cluster
+
+
+Worker node send request to master node with the token given by the master to join the cluster
+
+
+Both Master and Worker node have kube minions which ensure the connectivity between them
+
+
+Master and worker nodes in the cluster operate at same precedence creating a cluster between them
+How does Chef Server and Client communicate to get Cookbook to configure the production server?
+
+￼
+Mark
+
+
+Chef Client generate the cookbook after being authenticated by Chef Server
+
+
+Chef Client gets the Cookbook from the repository after being directed by Chef Server
+
+
+Chef Client pulls the Cookbook from Chef Server to configure
+
+
+Chef Server pushes the Cookbook to trigger Chef Client to configure
+
