@@ -1,16 +1,38 @@
 Git --version
+git config
+git ignore
 git init
+git clone
+git push -u origin master
+git pull
+git branch
+git checkout
+git checkout -b
 git status
 git add .
 git commit -m "reason"
 git commit -am "reason" add & commit one shot
 git diff
 git log
-git checkout oldcommitid recover u r file
+git branch -D
+git branch -d
+git reset head
+git rebase
+git restore filename
+git featch
+
 Share a remote repo to all:
 create new project as public policy in the github to share everyone then go to local to push the code:
 git remote add origin https://GIT URL OF PROJECT repo.
 git remote -v then able to see reop
-git push -u origin master
-git pull
+git & git lab:
+
+git branch -a --show all remote branches
+git remote show origin
+git remote set-url origin URL
+git remote add origin
+git config --global user.name
+git config --list
+git config -oglobal --remove-section 
+git clean modcache
 
